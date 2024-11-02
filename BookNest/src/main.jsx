@@ -13,8 +13,7 @@ import BookDetails from './component/BookDetails/BookDetails';
 import ListedBook from './component/ListedBook/ListedBook';
 import ReadList from './component/ReadList/ReadList';
 const router = createBrowserRouter([
-  {
-    path: "/",
+  { path: "/",
     element: <Root></Root>,
     errorElement:<ErrorPage></ErrorPage>,
     children: [
@@ -29,12 +28,13 @@ const router = createBrowserRouter([
       {
         path: "/listedBook",
         element: <ListedBook></ListedBook>,
-        loader:()=>fetch('/booksData.json')
-        // children:[{
-        //   path: "/",
-        //   element:<ReadList></ReadList>
-        // },
-        // ]
+        loader:()=>fetch('../booksData.json'),
+        children:[{
+          path: "readList",
+          element:<ReadList></ReadList>,
+          loader:()=>fetch('../booksData.json'),
+        },
+        ]
       },
       // {
       //   path: "/readList",
