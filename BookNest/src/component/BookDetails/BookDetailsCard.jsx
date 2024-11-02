@@ -1,8 +1,18 @@
 import React from 'react'
-
+import {addStoreData,addWishListStoreData} from "../Utility/AddToDB.js"
 export default function BookDetailsCard({book}) {
   const {bookId, image, bookName, author, tags, rating, category,review,totalPages,publisher,yearOfPublishing } = book;
   console.log(book)
+  const handleMarkAsRead=(id)=>{
+    console.log('mark as read',id);
+    addStoreData(id)
+    
+  }
+  const handleWishList=(id)=>{
+    console.log('wishlisted',id);
+    addWishListStoreData(id)
+    
+  }
   return (
     <div className='container mx-auto'>
       <div className="hero bg-base-200 min-h-screen">
@@ -38,8 +48,8 @@ export default function BookDetailsCard({book}) {
         <td className='pl-12 py-2 font-bold'>{rating}★</td>
       </tr>
       <div className='flex justify-start items-center mt-5'>
-        <button className='btn btn-outline btn-accent mr-5'>Read</button>
-        <button className='btn btn-outline btn-accent'>WishList</button>
+        <button onClick={()=>handleMarkAsRead(bookId)} className='btn btn-outline btn-accent mr-5'>Mark as Read</button>
+        <button onClick={()=>{handleWishList(bookId)}} className='btn btn-outline btn-accent'>WishList</button>
       </div>
     </div>
   </div>

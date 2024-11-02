@@ -3,13 +3,10 @@ import { useLoaderData, useParams } from 'react-router-dom'
 import BookDetailsCard from './BookDetailsCard'
 
 export default function BookDetails() {
-  console.log('bookdetails called')
   const {bookId}=useParams()
-  console.log(typeof bookId,bookId)
+  const id=parseInt(bookId)
   const data=useLoaderData()
-  console.log(data)
-  const findData=[...data].find(book=>book.bookId==bookId)
-  console.log(findData)
+  const findData=[...data].find(book=>book.bookId==id)
   return (
     <div>
       <BookDetailsCard book={findData}></BookDetailsCard>
