@@ -3,3 +3,7 @@ li {
   font-size: larger;
   font-weight: 500;
 }
+
+nav a.active {
+  background-color: aqua;
+}

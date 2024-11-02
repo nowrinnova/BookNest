@@ -9,7 +9,9 @@ export default function Header() {
   <li><NavLink to="/pageRead">Page to Read</NavLink></li>
   </>
   return (
-    <div className="navbar bg-base-100">
+    <nav>
+
+<div className="navbar bg-base-100">
     <div className="navbar-start">
       <div className="dropdown">
         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,13 +38,14 @@ export default function Header() {
     </div>
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1">
-     {link}
+    {link}
       </ul>
     </div>
     <div className="navbar-end">
-      <NavLink to={'/signIn'} className="btn mr-2">Sign In</NavLink>
-      <NavLink to={'/signUp'} className="btn">Sign Up</NavLink>
+      <NavLink to={'/signIn'} className="btn btn-outline btn-accent  mr-2">Sign In</NavLink>
+      <NavLink to={'/signUp'} className="btn btn-outline btn-accent">Sign Up</NavLink>
     </div>
   </div>
+    </nav>
   )
 }

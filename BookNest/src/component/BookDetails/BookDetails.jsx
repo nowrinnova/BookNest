@@ -12,9 +12,7 @@ export default function BookDetails() {
   console.log(findData)
   return (
     <div>
-      <h1>bookDetails</h1>
       <BookDetailsCard book={findData}></BookDetailsCard>
- 
     </div>
   )
 }

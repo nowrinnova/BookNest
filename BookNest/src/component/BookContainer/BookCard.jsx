@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 export default function BookCard({ book }) {
-  console.log(book);
   const {bookId, image, bookName, author, tags, rating, category } = book;
   return (
     <Link to={`/bookDetails/${bookId}`}>
@@ -14,7 +13,7 @@ export default function BookCard({ book }) {
         />
       </figure>
       <div className="card-body">
-        <div className="flex gap-2">{tags.map(tag=><div className="badge badge-accent badge-outline">{tag}</div>)}</div>
+        <div className="flex gap-2">{tags.map(tag=> <div  className="badge badge-accent badge-outline">{tag}</div>)}</div>
         <h2 className="card-title">{bookName}</h2>
         <p>by: {author}</p>
         <div className="divider"></div>

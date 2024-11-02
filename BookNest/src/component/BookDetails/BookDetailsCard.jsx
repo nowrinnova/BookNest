@@ -37,6 +37,10 @@ export default function BookDetailsCard({book}) {
         <td className=''>Rating</td>
         <td className='pl-12 py-2 font-bold'>{rating}★</td>
       </tr>
+      <div className='flex justify-start items-center mt-5'>
+        <button className='btn btn-outline btn-accent mr-5'>Read</button>
+        <button className='btn btn-outline btn-accent'>WishList</button>
+      </div>
     </div>
   </div>
 </div>
