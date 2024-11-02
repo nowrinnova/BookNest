@@ -1,0 +1,5 @@
+.tabs a.active {
+  color: black;
+  background-color: #fff;
+  font-weight: 600;
+}

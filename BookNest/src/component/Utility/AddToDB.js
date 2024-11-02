@@ -43,4 +43,4 @@ const getWishListStoreData=()=>{
  }
 
 
-export{addStoreData,addWishListStoreData}
+export{addStoreData,addWishListStoreData,getStoreData,getWishListStoreData}

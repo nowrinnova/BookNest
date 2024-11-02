@@ -34,7 +34,7 @@ export default function Header() {
           {link}
         </ul>
       </div>
-      <a className="btn btn-ghost text-xl">Book Nest</a>
+      <a className="btn btn-ghost text-xl" href='/'>Book Nest</a>
     </div>
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1">
